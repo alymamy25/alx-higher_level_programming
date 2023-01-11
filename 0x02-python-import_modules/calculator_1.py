@@ -4,11 +4,15 @@ def add(a, b):
 
     """My addition function
 
+
+
     Args:
 
         a: first integer
 
         b: second integer
+
+
 
     Returns:
 
@@ -26,11 +30,15 @@ def sub(a, b):
 
     """My subtraction function
 
+
+
     Args:
 
         a: first integer
 
         b: second integer
+
+
 
     Returns:
 
@@ -48,11 +56,15 @@ def mul(a, b):
 
     """My multiplication function
 
+
+
     Args:
 
         a: first integer
 
         b: second integer
+
+
 
     Returns:
 
@@ -70,11 +82,15 @@ def div(a, b):
 
     """My division function
 
+
+
     Args:
 
         a: first integer
 
         b: second integer
+
+
 
     Returns:
 
