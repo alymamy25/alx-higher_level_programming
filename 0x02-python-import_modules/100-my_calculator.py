@@ -1,103 +1,53 @@
 #!/usr/bin/python3
 
-def add(a, b):
 
-    """My addition function
 
+if __name__ == "__main__":
 
+    import sys
 
-    Args:
 
-        a: first integer
 
-        b: second integer
+    nargs = len(sys.argv) - 1
 
+    if nargs != 3:
 
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
 
-    Returns:
+        sys.exit(1)
 
-        The return value. a + b
 
-    """
 
-    return (a + b)
+    op = sys.argv[2]
 
+    if op != '+' and op != '-' and op != '*' and op != '/':
 
+        print("Unknown operator. Available operators: +, -, * and /")
 
+        sys.exit(1)
 
 
-def sub(a, b):
 
-    """My subtraction function
+    from calculator_1 import add, sub, mul, div
 
+    a = int(sys.argv[1])
 
+    b = int(sys.argv[3])
 
-    Args:
 
-        a: first integer
 
-        b: second integer
+    if op == '+':
 
+        print("{} + {} = {}".format(a, b, add(a, b)))
 
+    elif op == '-':
 
-    Returns:
+        print("{} - {} = {}".format(a, b, sub(a, b)))
 
-        The return value. a - b
+    elif op == '*':
 
-    """
+        print("{} * {} = {}".format(a, b, mul(a, b)))
 
-    return (a - b)
+    else:
 
-
-
-
-
-def mul(a, b):
-
-    """My multiplication function
-
-
-
-    Args:
-
-        a: first integer
-
-        b: second integer
-
-
-
-    Returns:
-
-        The return value. a * b
-
-    """
-
-    return (a * b)
-
-
-
-
-
-def div(a, b):
-
-    """My division function
-
-
-
-    Args:
-
-        a: first integer
-
-        b: second integer
-
-
-
-    Returns:
-
-        The return value. a / b
-
-    """
-
-    return int(a / b)
-
-
+        print("{} / {} = {}".format(a, b, div(a, b)))
